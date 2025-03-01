@@ -1,0 +1,865 @@
+--ui lib
+local OrionLib = loadstring(game:HttpGet(('https://gist.githubusercontent.com/rsdashman/2d3f6be01a65b0fef2b931fd188dbd87/raw/74ddfe620afad86cbe52a77c9f0cfb217972424e/gistfile1.txt')))()
+local Window = OrionLib:MakeWindow({Name = "Th4mKrsHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+local Tab = Window:MakeTab({
+Name = "🔗 Local-Player        ",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+
+
+
+local Section = Tab:AddSection({
+	Name = "PAG-1"
+})
+
+
+Tab:AddButton({
+	Name = "Fly!(Universal)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://gist.githubusercontent.com/rsdashman/b96e031446d5a19d8495043a1c134837/raw/acce3da478a58b6345dace47161ca89b26b5d5c3/gistfile1.txt"))() 
+  	end    
+})
+
+
+Tab:AddColorpicker({
+	Name = "Colorpicker",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+
+
+
+
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 16,
+	Max = 250,
+	Default = 16,
+	Color = Color3.fromRGB(0,255,0),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value)
+		local character = game.Players.LocalPlayer.Character
+local walkSpeed = Value 
+
+character.Humanoid.WalkSpeed = walkSpeed
+	end    
+})
+
+
+
+Tab:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 250,
+	Default = 50,
+	Color = Color3.fromRGB(0,255,0),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+
+Tab:AddTextbox({
+	Name = "Gravit (196.2)",
+	Default = "196.2",
+	TextDisappear = true,
+	Callback = function(Text)
+		local newGravity = Text -- Default Roblox gravity is 196.2, you can change this value
+
+
+local function changeGravity()
+    game.Workspace.Gravity = newGravity
+    print("Gravity has been set to " .. newGravity)
+end
+
+
+changeGravity()
+	end	  
+})
+
+
+
+Tab:AddButton({
+	Name = "RST GRVTSPDWJUMPPWR",
+	Callback = function()
+      				local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+game.Workspace.Gravity = 196.2
+if humanoid then
+    humanoid.JumpPower = 50
+    humanoid.WalkSpeed = 16
+end
+  	end    
+})
+
+
+
+
+
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]
+
+
+Tab:AddLabel("^DATA^")
+
+Tab:AddParagraph("Created in 01/03/25","UPD 1.1.1")
+
+
+local Tab = Window:MakeTab({
+Name = "🔗 FE SCRIPTS",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Example"
+})
+
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+Tab:AddButton({
+	Name = "FE!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "�Games👇",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "🔗Soonn",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Sonn"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OrionLib:MakeNotification({
+	Name = "Creds orion lib!",
+	Content = "Orion lib modify",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OrionLib:Init()
